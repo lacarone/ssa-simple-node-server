@@ -1,0 +1,46 @@
+<html>
+
+<head>
+  <title>WebConsole</title>
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" href="/images/favicon/favicon.png">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <h1>SSA Simple Node Server</h1>
+  <br />
+  <p>Available API endpoints</p>
+  <ul>
+    <li>
+      <a target="_blank" href="/api/v1/generateUsers?userCount=5&maxPosts=10">
+        /api/v1/generateUsers?userCount=5&maxPosts=10
+      </a> 
+      <br />
+      <strong>userCount</strong> = Number of users to generate (>0);
+      <br />
+      <strong>maxPosts</strong> = API will generate random posts, from 0 to maxPosts number (>0);
+    </li>
+    <li>
+      <a target="_blank" href="/api/v1/users?page=1&per=3">
+        /api/v1/users?page=1&per=3
+      </a> 
+      <br />
+      <strong>page</strong> = Page number (>0);
+      <br />
+      <strong>per</strong> = Results per page (>0);
+    </li>
+  </ul>
+
+  <br />
+  <p>
+    Official UI Web Console for this API Server:
+    <br />
+    👉 
+    <a href="https://github.com/lacarone" target="_blank">
+      https://github.com/lacarone
+    </a>
+  </p>
+</body>
+
+</html>
