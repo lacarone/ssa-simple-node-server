@@ -1,3 +1,4 @@
+require('dotenv').config();
 const Sequelize = require('sequelize');
 // const syncModels = require('../models/syncModels');
 
@@ -8,7 +9,7 @@ const Sequelize = require('sequelize');
 // Creating a sequelize instance with sqlite running locally
 const sequelize = new Sequelize('database', 'username', 'password', {
     dialect: 'sqlite',
-    storage: 'D:\Software\Databases\SQLite\ssa-simple-node-server\sqlite-main.db',
+    storage: process.env.DATABASE_PATH || './database/sqlite-main.db',
 });
 
 // Testing the connection
