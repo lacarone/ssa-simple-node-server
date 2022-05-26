@@ -1,6 +1,5 @@
 require('dotenv').config();
 const Sequelize = require('sequelize');
-// const syncModels = require('../models/syncModels');
 
 
 // Creating a sequelize instance with sqlite running in memory

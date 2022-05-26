@@ -12,7 +12,7 @@ const User = sequelize.define('User', {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        createdAt: {
+        created_at: {
             type: DataTypes.NUMBER,
             allowNull: false,
         },

@@ -20,7 +20,7 @@ const Post = sequelize.define('Post', {
             type: DataTypes.TEXT,
             allowNull: false,
         },
-        createdAt: {
+        created_at: {
             type: DataTypes.NUMBER,
             allowNull: false,
         },

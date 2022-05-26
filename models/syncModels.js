@@ -1,9 +1,10 @@
-// const sequelize = require('../database_controllers/sqliteDatabaseConnectorLocal');
+// Importing models
 const User = require('./User');
 const Post = require('./Post');
 
 // Defining associations
 User.hasMany(Post);
+Post.belongsTo(User);
 
 // Sync all the models to the database tables
 module.exports = async (sequelize) => {
@@ -13,6 +14,11 @@ module.exports = async (sequelize) => {
      * changes tables to fit the new shape of the model 
      */
     const alterDatabase = true;
-    await sequelize.sync({ alter: alterDatabase });
+    const wipeDatabaseOnAppStart = false;
+    const options = {
+        alter: alterDatabase,
+        force: wipeDatabaseOnAppStart,
+    }
+    await sequelize.sync(options);
     return;
 };
