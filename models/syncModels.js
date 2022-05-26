@@ -13,7 +13,7 @@ module.exports = async (sequelize) => {
      * if alterDatabase is set to true 
      * changes tables to fit the new shape of the model 
      */
-    const alterDatabase = true;
+    const alterDatabase = false;
     const wipeDatabaseOnAppStart = false;
     const options = {
         alter: alterDatabase,
