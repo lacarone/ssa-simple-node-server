@@ -140,7 +140,7 @@ module.exports = (router) => {
 		
 		// No users in db
 		if (users?.length === 0)
-			return res.status(202).json(jsonResponse);
+			return res.status(200).json(jsonResponse);
 
 		// format User data an
 		jsonResponse.data = extractAndFormatUsersData(users);

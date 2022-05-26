@@ -67,7 +67,7 @@ module.exports = (router) => {
 		
 		// checking if number of users to generate is at least 1
 		if (query.userCount < 1)
-			return res.status(400).json({responseMessage: "userCount has to be at least 1"});
+			return res.status(400).json({responseMessage: "invalid_query::count"});
 
 		// database generation
 		_.range(query.userCount).forEach((i) => {
